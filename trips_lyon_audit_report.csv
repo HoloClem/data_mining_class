@@ -1,0 +1,11 @@
+﻿Step,Affected rows,Action,Reason,Rows remaining
+Invalid trip duration,205,Removed invalid trips,Valid duration must be > 0 and < 1440 minutes,6795
+Vehicle type standardization,2249,Standardized recognized labels; unknown labels flagged,Only three canonical vehicle types are allowed,6795
+Outside-station trips,397,Kept all rows; added outside_station flag,Missing end station indicates parking outside a station,6795
+Duration outliers,160,Flagged outliers; no rows removed,IQR method with k = 1.5,6795
+Duplicate trip IDs,0,Reported only,Trip IDs should be unique; no automatic deletion,6795
+Invalid start times,0,Reported only,Start times must follow YYYY-MM-DD HH:MM:SS,6795
+Distance consistency,0,Reported only,Kilometres and metres should agree within 1 metre,6795
+Invalid battery percentage,0,Reported only,Battery percentage must be between 0 and 100,6795
+Invalid prices or rates,0,Reported only,Prices and rates must be non-negative,6795
+Price calculation differences,6795,Reported only,Assumes price = duration x rate; other fees may apply,6795
